@@ -1,0 +1,201 @@
+product_id,product_name,category,price,cost
+1,Product 1,Food,27.08,197.04
+2,Product 2,Sports,448.51,122.82
+3,Product 3,Toys,431.46,14.98
+4,Product 4,Home & Garden,234.14,45.18
+5,Product 5,Food,201.67,112.46
+6,Product 6,Books,143.75,182.58
+7,Product 7,Electronics,243.57,150.35
+8,Product 8,Food,31.74,164.32
+9,Product 9,Books,427.57,122.42
+10,Product 10,Toys,27.36,155.86
+11,Product 11,Toys,171.24,85.61
+12,Product 12,Electronics,466.48,120.19
+13,Product 13,Clothing,370.25,187.35
+14,Product 14,Electronics,147.88,218.6
+15,Product 15,Sports,133.8,111.25
+16,Product 16,Food,12.49,15.7
+17,Product 17,Home & Garden,350.9,44.61
+18,Product 18,Clothing,33.9,10.11
+19,Product 19,Electronics,270.98,165.05
+20,Product 20,Books,481.44,86.42
+21,Product 21,Clothing,63.64,137.91
+22,Product 22,Food,448.3,125.85
+23,Product 23,Clothing,495.82,24.97
+24,Product 24,Food,40.14,103.8
+25,Product 25,Electronics,442.62,59.04
+26,Product 26,Food,262.88,107.51
+27,Product 27,Clothing,454.19,54.88
+28,Product 28,Books,289.95,210.91
+29,Product 29,Toys,334.43,47.68
+30,Product 30,Clothing,276.45,240.39
+31,Product 31,Food,433.6,106.9
+32,Product 32,Toys,369.62,212.33
+33,Product 33,Food,265.42,159.05
+34,Product 34,Books,435.4,185.16
+35,Product 35,Food,130.19,193.09
+36,Product 36,Electronics,87.1,128.69
+37,Product 37,Home & Garden,88.6,138.11
+38,Product 38,Clothing,173.66,130.93
+39,Product 39,Home & Garden,126.96,149.07
+40,Product 40,Food,465.74,12.2
+41,Product 41,Books,61.86,101.9
+42,Product 42,Clothing,352.51,153.52
+43,Product 43,Food,102.72,151.44
+44,Product 44,Toys,442.0,199.27
+45,Product 45,Sports,481.04,165.48
+46,Product 46,Food,238.08,248.07
+47,Product 47,Home & Garden,440.75,74.54
+48,Product 48,Clothing,12.52,92.99
+49,Product 49,Home & Garden,411.77,99.04
+50,Product 50,Clothing,122.03,119.12
+51,Product 51,Food,455.26,209.82
+52,Product 52,Electronics,10.55,62.77
+53,Product 53,Toys,282.53,195.12
+54,Product 54,Food,380.75,104.3
+55,Product 55,Home & Garden,136.76,152.45
+56,Product 56,Sports,104.64,159.97
+57,Product 57,Sports,51.21,96.35
+58,Product 58,Books,169.95,130.59
+59,Product 59,Clothing,284.32,106.19
+60,Product 60,Home & Garden,66.76,21.94
+61,Product 61,Books,194.58,112.11
+62,Product 62,Home & Garden,14.45,28.86
+63,Product 63,Clothing,411.15,104.23
+64,Product 64,Food,72.94,150.27
+65,Product 65,Food,148.84,146.96
+66,Product 66,Sports,19.03,167.34
+67,Product 67,Food,221.8,28.34
+68,Product 68,Food,421.66,164.77
+69,Product 69,Electronics,202.15,81.48
+70,Product 70,Sports,97.95,102.77
+71,Product 71,Books,379.31,215.21
+72,Product 72,Toys,396.52,7.21
+73,Product 73,Electronics,95.14,149.16
+74,Product 74,Books,387.72,151.68
+75,Product 75,Clothing,474.18,102.18
+76,Product 76,Electronics,91.53,63.07
+77,Product 77,Books,387.78,62.5
+78,Product 78,Clothing,357.2,221.51
+79,Product 79,Sports,242.05,113.3
+80,Product 80,Toys,38.38,86.07
+81,Product 81,Clothing,46.6,114.95
+82,Product 82,Food,427.68,169.0
+83,Product 83,Home & Garden,495.17,40.71
+84,Product 84,Clothing,341.27,115.11
+85,Product 85,Clothing,228.52,149.03
+86,Product 86,Toys,327.31,237.4
+87,Product 87,Home & Garden,301.25,66.87
+88,Product 88,Food,197.97,93.02
+89,Product 89,Books,42.16,97.94
+90,Product 90,Books,412.54,153.36
+91,Product 91,Clothing,192.2,92.4
+92,Product 92,Home & Garden,411.2,135.71
+93,Product 93,Home & Garden,133.73,196.54
+94,Product 94,Food,10.5,177.82
+95,Product 95,Toys,87.88,114.36
+96,Product 96,Sports,239.58,216.73
+97,Product 97,Books,472.71,141.74
+98,Product 98,Toys,60.07,137.28
+99,Product 99,Electronics,428.56,13.38
+100,Product 100,Books,268.24,246.74
+101,Product 101,Toys,414.7,35.13
+102,Product 102,Books,156.2,61.63
+103,Product 103,Sports,421.57,17.67
+104,Product 104,Electronics,388.68,161.8
+105,Product 105,Sports,122.73,60.05
+106,Product 106,Food,74.35,49.1
+107,Product 107,Electronics,435.35,26.7
+108,Product 108,Clothing,481.99,30.31
+109,Product 109,Toys,25.34,148.24
+110,Product 110,Electronics,368.32,173.61
+111,Product 111,Food,455.67,102.36
+112,Product 112,Food,430.11,122.57
+113,Product 113,Sports,482.62,173.06
+114,Product 114,Books,382.45,9.26
+115,Product 115,Electronics,226.73,84.17
+116,Product 116,Toys,162.86,243.41
+117,Product 117,Electronics,167.16,147.13
+118,Product 118,Home & Garden,364.97,67.29
+119,Product 119,Books,375.46,132.82
+120,Product 120,Toys,108.18,88.95
+121,Product 121,Toys,435.38,135.4
+122,Product 122,Clothing,360.31,35.81
+123,Product 123,Sports,285.75,37.52
+124,Product 124,Clothing,241.05,40.17
+125,Product 125,Toys,276.18,235.26
+126,Product 126,Books,88.03,184.56
+127,Product 127,Electronics,109.81,44.78
+128,Product 128,Electronics,54.67,51.15
+129,Product 129,Books,85.29,184.05
+130,Product 130,Toys,232.31,43.26
+131,Product 131,Food,269.87,62.47
+132,Product 132,Electronics,18.75,241.02
+133,Product 133,Food,400.43,67.55
+134,Product 134,Electronics,154.14,167.1
+135,Product 135,Electronics,456.8,244.76
+136,Product 136,Sports,484.08,96.7
+137,Product 137,Sports,100.87,9.29
+138,Product 138,Home & Garden,236.43,64.82
+139,Product 139,Clothing,10.6,208.56
+140,Product 140,Books,303.18,216.83
+141,Product 141,Books,307.58,193.29
+142,Product 142,Books,131.29,32.71
+143,Product 143,Home & Garden,283.62,199.9
+144,Product 144,Sports,120.51,230.08
+145,Product 145,Toys,88.8,152.15
+146,Product 146,Food,329.24,235.51
+147,Product 147,Food,169.7,207.58
+148,Product 148,Toys,299.23,168.41
+149,Product 149,Home & Garden,222.29,146.41
+150,Product 150,Toys,492.33,90.4
+151,Product 151,Books,83.29,44.03
+152,Product 152,Clothing,237.65,153.21
+153,Product 153,Electronics,343.42,82.94
+154,Product 154,Food,203.82,217.28
+155,Product 155,Sports,487.6,248.37
+156,Product 156,Sports,363.72,189.34
+157,Product 157,Home & Garden,331.92,27.17
+158,Product 158,Sports,380.96,75.73
+159,Product 159,Books,476.8,31.73
+160,Product 160,Food,454.83,164.38
+161,Product 161,Toys,364.9,192.47
+162,Product 162,Books,377.09,231.79
+163,Product 163,Home & Garden,81.5,112.35
+164,Product 164,Books,60.37,225.84
+165,Product 165,Toys,289.74,220.08
+166,Product 166,Clothing,19.0,82.71
+167,Product 167,Home & Garden,246.35,217.88
+168,Product 168,Clothing,113.07,97.04
+169,Product 169,Electronics,179.55,77.73
+170,Product 170,Clothing,390.14,164.02
+171,Product 171,Electronics,471.21,85.45
+172,Product 172,Electronics,45.48,159.4
+173,Product 173,Clothing,271.78,154.41
+174,Product 174,Home & Garden,442.44,143.04
+175,Product 175,Toys,50.43,98.2
+176,Product 176,Books,414.01,139.38
+177,Product 177,Books,185.32,151.14
+178,Product 178,Toys,167.83,138.69
+179,Product 179,Food,488.96,113.88
+180,Product 180,Food,108.42,8.59
+181,Product 181,Electronics,349.67,148.83
+182,Product 182,Electronics,412.51,46.27
+183,Product 183,Home & Garden,30.18,162.43
+184,Product 184,Sports,338.49,191.04
+185,Product 185,Clothing,476.26,127.61
+186,Product 186,Electronics,70.87,137.88
+187,Product 187,Books,449.15,238.11
+188,Product 188,Home & Garden,301.44,212.56
+189,Product 189,Clothing,312.14,228.99
+190,Product 190,Home & Garden,310.34,204.37
+191,Product 191,Clothing,156.43,31.68
+192,Product 192,Clothing,468.25,41.5
+193,Product 193,Toys,474.2,134.02
+194,Product 194,Electronics,316.4,65.29
+195,Product 195,Home & Garden,393.88,121.79
+196,Product 196,Home & Garden,310.01,101.62
+197,Product 197,Toys,247.36,139.61
+198,Product 198,Books,333.8,187.98
+199,Product 199,Books,280.97,180.3
+200,Product 200,Food,302.76,132.7
