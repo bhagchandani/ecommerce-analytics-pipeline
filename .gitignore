@@ -56,3 +56,11 @@ desktop.ini
 *.code-workspace
 
 # =================
+
+# Airflow
+logs/
+plugins/
+config/
+airflow.db
+airflow.cfg
+airflow-webserver.pid
