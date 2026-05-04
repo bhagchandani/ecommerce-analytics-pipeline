@@ -152,9 +152,14 @@ docker compose up -d            # Start all services
 
 ## Project Structure
 
+## Project Structure
+
+```text
 ecommerce_analytics/
+│
 ├── dags/
 │   └── ecommerce_dbt_pipeline.py     # Main orchestration DAG
+│
 ├── models/
 │   ├── staging/                      # Clean, standardized data
 │   │   ├── sources.yml               # Source definitions
@@ -162,6 +167,7 @@ ecommerce_analytics/
 │   │   ├── stg_products.sql
 │   │   ├── stg_orders.sql
 │   │   └── stg_order_items.sql
+│   │
 │   └── marts/                        # Star schema analytics
 │       ├── schema.yml                # Tests and documentation
 │       ├── fct_orders.sql            # Full refresh fact table
@@ -169,17 +175,23 @@ ecommerce_analytics/
 │       ├── dim_customers.sql
 │       ├── dim_products.sql
 │       └── dim_date.sql
+│
 ├── macros/
 │   ├── generate_schema_name.sql     # Custom schema macro
 │   └── calculate_profit_margin.sql  # Reusable calculations
-├── sql/setup/
-│   └── 01_create_raw_tables.sql     # Snowflake initialization
+│
+├── sql/
+│   └── setup/
+│       └── 01_create_raw_tables.sql # Snowflake initialization
+│
 ├── scripts/
 │   └── generate_sample_data.py      # Data generation
+│
 ├── data/                             # Sample CSV files
 ├── screenshots/                      # Project screenshots
 ├── docker-compose.yaml               # Airflow configuration
 └── dbt_project.yml                   # dbt configuration
+```
 
 ## Skills Demonstrated
 
@@ -214,23 +226,56 @@ ecommerce_analytics/
 
 In a real-world environment, this pipeline would operate as:
 
-PostgreSQL (Source DB)
-↓
-Fivetran (Hourly sync)
-↓
-Snowflake RAW schema
-↓
-Airflow triggers (Daily 2 AM)
-↓
-dbt run --select staging
-↓
-dbt run --select marts
-↓
-dbt test
-↓
-Slack notification
-↓
-BI Tools (Tableau/Looker)
+```text
+┌─────────────────────┐
+│ PostgreSQL          │
+│ (Source Database)   │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ Fivetran            │
+│ (Hourly Sync)       │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ Snowflake RAW       │
+│ (Landing Zone)      │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ Airflow Trigger     │
+│ (Daily 2 AM)        │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ dbt run --staging   │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ dbt run --marts     │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ dbt test            │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ Slack Notification  │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│ BI Tools            │
+│ (Tableau/Looker)    │
+└─────────────────────┘
+```
 
 ## Screenshots
 
