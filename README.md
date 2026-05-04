@@ -16,6 +16,7 @@ For this learning project:
   - `dim_customers`: Customer dimension (1K records)
   - `dim_products`: Product dimension with profit margins
   - `dim_date`: Date dimension for time-series analysis
+  
 
 ### Orchestration
 In production, this would run on:
