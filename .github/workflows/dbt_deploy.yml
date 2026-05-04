@@ -1,0 +1,39 @@
+# This file DEPLOYS to production when code is merged
+name: Deploy to Production
+
+# WHEN to run: When code is merged to main branch
+on:
+  push:
+    branches:
+      - main
+
+# WHAT to do:
+jobs:
+  deploy-to-staging:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dbt
+        run: pip install dbt-snowflake==1.11.4
+      
+      - name: Deploy to Staging
+        run: |
+          dbt run --target staging
+          dbt test --target staging
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+      
+      - name: Notify on Slack
+        if: success()
+        run: |
+          echo "Deployment successful! In production, this would send Slack notification"

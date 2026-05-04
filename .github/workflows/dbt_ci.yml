@@ -1,0 +1,41 @@
+# This file runs TESTS on every Pull Request
+name: dbt CI Tests
+
+# WHEN to run: On Pull Requests to main branch
+on:
+  pull_request:
+    branches: 
+      - main
+
+# WHAT to do:
+jobs:
+  test-dbt-models:
+    runs-on: ubuntu-latest  # Use GitHub's Linux server
+    
+    steps:
+      # Step 1: Download your code
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      # Step 3: Install dbt
+      - name: Install dbt
+        run: |
+          pip install dbt-snowflake==1.11.4
+      
+      # Step 4: Run dbt tests
+      - name: Run dbt tests
+        run: |
+          dbt deps
+          dbt run --select state:modified+
+          dbt test
+        env:
+          # These are SECRETS stored in GitHub
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
