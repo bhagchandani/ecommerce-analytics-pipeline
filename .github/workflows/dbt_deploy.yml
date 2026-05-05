@@ -24,14 +24,18 @@ jobs:
       - name: Install dbt
         run: pip install dbt-snowflake==1.11.4
       
+      - name: Setup Snowflake private key
+        run: |
+          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" | base64 -d > /tmp/snowflake_key.p8
+          chmod 600 /tmp/snowflake_key.p8
+      
       - name: Deploy to Staging
         run: |
           dbt run --profiles-dir .github --target dev
           dbt test --profiles-dir .github --target dev
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}}
       
       - name: Notify on Slack
         if: success()

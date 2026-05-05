@@ -28,6 +28,11 @@ jobs:
         run: |
           pip install dbt-snowflake==1.11.4
       
+      - name: Setup Snowflake private key
+        run: |
+          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" | base64 -d > /tmp/snowflake_key.p8
+          chmod 600 /tmp/snowflake_key.p8
+
       # Step 4: Run dbt tests
       - name: Run dbt tests
         run: |
@@ -38,4 +43,3 @@ jobs:
           # These are SECRETS stored in GitHub
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}

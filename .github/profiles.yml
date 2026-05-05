@@ -5,10 +5,9 @@ ecommerce_analytics:
       type: snowflake
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       user: "{{ env_var('SNOWFLAKE_USER') }}"
-      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      private_key_path: /tmp/snowflake_key.p8
       role: ACCOUNTADMIN
       database: ECOMMERCE_DB
-      schema: STAGING
       warehouse: DEV_WH
+      schema: STAGING
       threads: 4
-      client_session_keep_alive: False
