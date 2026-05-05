@@ -26,8 +26,8 @@ jobs:
       
       - name: Deploy to Staging
         run: |
-          dbt run --target staging
-          dbt test --target staging
+          dbt run --profiles-dir .github --target dev
+          dbt test --profiles-dir .github --target dev
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}

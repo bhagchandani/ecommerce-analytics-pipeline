@@ -31,9 +31,9 @@ jobs:
       # Step 4: Run dbt tests
       - name: Run dbt tests
         run: |
-          dbt deps
-          dbt run --select state:modified+
-          dbt test
+          dbt deps --profiles-dir .github
+          dbt run --profiles-dir .github
+          dbt test --profiles-dir .github
         env:
           # These are SECRETS stored in GitHub
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
