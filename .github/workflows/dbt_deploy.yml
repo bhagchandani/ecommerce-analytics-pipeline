@@ -33,11 +33,12 @@ jobs:
       
       - name: Deploy to Staging
         run: |
+          dbt deps --profiles-dir .github         
           dbt run --profiles-dir .github --target dev
           dbt test --profiles-dir .github --target dev
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }} 
       
       - name: Notify on Slack
         if: success()
