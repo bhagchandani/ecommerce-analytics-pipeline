@@ -30,7 +30,9 @@ jobs:
       
       - name: Setup Snowflake private key
         run: |
-          echo "${{ secrets.SNOWFLAKE_PRIVATE_KEY }}" > /tmp/snowflake_key.p8
+          cat << 'EOF' > /tmp/snowflake_key.p8
+          ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
+          EOF
           chmod 600 /tmp/snowflake_key.p8
 
       # Step 4: Run dbt tests
