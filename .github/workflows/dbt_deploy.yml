@@ -37,7 +37,7 @@ jobs:
           dbt test --profiles-dir .github --target dev
         env:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
       
       - name: Notify on Slack
         if: success()
